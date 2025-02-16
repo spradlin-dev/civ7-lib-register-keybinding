@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="lib-register-keybinding" version="1"
+     xmlns="ModInfo">
+    <Properties>
+        <Name>lib-register-keybinding</Name>
+        <Description>Adds a way for mods to register their keybindings for display in options without having to overwrite the default keybinding script</Description>
+        <Authors>MadDachshund</Authors>
+        <Package>Mod</Package>
+        <AffectsSavedGames>0</AffectsSavedGames>
+    </Properties>
+    <Dependencies>
+        <Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME"/>
+    </Dependencies>
+    <ActionCriteria>
+        <Criteria id="always">
+            <AlwaysMet/>
+        </Criteria>
+    </ActionCriteria>
+    <ActionGroups>
+        <ActionGroup id="lib-register-keybinding-always" scope="shell" criteria="always">
+            <Properties>
+                <LoadOrder>1</LoadOrder>
+            </Properties>
+            <Actions>
+                <ImportFiles>
+                    <Item>ui/options/editors/editor-keyboard-mapping.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
+    </ActionGroups>
+</Mod>
