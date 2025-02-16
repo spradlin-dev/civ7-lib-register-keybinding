@@ -17,7 +17,17 @@
         </Criteria>
     </ActionCriteria>
     <ActionGroups>
-        <ActionGroup id="lib-register-keybinding-always" scope="shell" criteria="always">
+        <ActionGroup id="lib-register-keybinding-shell-always" scope="shell" criteria="always">
+            <Properties>
+                <LoadOrder>1</LoadOrder>
+            </Properties>
+            <Actions>
+                <ImportFiles>
+                    <Item>ui/options/editors/editor-keyboard-mapping.js</Item>
+                </ImportFiles>
+            </Actions>
+        </ActionGroup>
+        <ActionGroup id="lib-register-keybinding-game-always" scope="game" criteria="always">
             <Properties>
                 <LoadOrder>1</LoadOrder>
             </Properties>
